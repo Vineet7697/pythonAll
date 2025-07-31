@@ -104,6 +104,13 @@
 # z=data(5,10)
 # print(z)
 
+
+
+
+
+
+
+
 def decor(func):
     def inner(n):
         result=func(n)

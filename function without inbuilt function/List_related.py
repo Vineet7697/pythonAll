@@ -188,15 +188,17 @@ print(are_equal(li1,li2))
 
  
  
- 
-''' def list_to_string(lst):
+'''
+def list_to_string(lst):
     result = ''
     for ch in lst:
         result += str(ch)
     return result
 li=[1,2,3,4,5]
 print(list_to_string(li))
- '''
+'''
+
+
 
 
 

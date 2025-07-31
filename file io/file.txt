@@ -1,0 +1,8 @@
+this is from file handling this is
+        from file
+        handling thisispythonthis
+,is
+ ,python
+this
+is
+python
