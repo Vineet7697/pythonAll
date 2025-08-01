@@ -50,7 +50,7 @@ print(count_occurrences(li,5))
  
  
  
- 
+# reverse list using inbuilt function
 def reverse_list(lst):
     reversed_lst = []
     for i in range(len(lst) - 1, -1, -1):
@@ -60,12 +60,45 @@ li=[1,2,3,4,5,6,7,8,9,10]
 print(reverse_list(li))
 
 
+# reverse list without using inbuilt function
+def reverse_list(lst):
+    reversed_lst = []
+    for i in range(list_length(lst) - 1, -1, -1):
+        reversed_lst.append(lst[i])
+    return reversed_lst
+def list_length(lst):
+    count = 0
+    for _ in lst:
+        count += 1
+    return count
+li=[1,2,3,4,5,6,7,8,9,10]
+print(reverse_list(li))
+
+
+# palindrome using inbuilt function
 def is_palindrome(lst):
     n = len(lst)
     for i in range(n // 2):
         if lst[i] != lst[n - i - 1]:
             return False
     return True
+li=[1,2,3,2,1]
+print(is_palindrome(li))
+
+
+
+# palindrome without  using inbuilt function
+def is_palindrome(lst):
+    n = list_length(lst)
+    for i in range(n // 2):
+        if lst[i] != lst[n - i - 1]:
+            return False
+    return True
+def list_length(lst):
+    count = 0
+    for _ in lst:
+        count += 1
+    return count
 li=[1,2,3,2,1]
 print(is_palindrome(li))
 
@@ -85,7 +118,7 @@ li=[1,32,45,6,9,6,2,3,2,1]
 print(remove_duplicates(li))
 
 
- 
+# sort list using inbuilt function
 def sort_list(lst):
     n = len(lst)
     for i in range(n):
@@ -93,9 +126,26 @@ def sort_list(lst):
             if lst[i] > lst[j]:
                 lst[i], lst[j] = lst[j], lst[i]
     return lst
-
 li=[1,32,45,6,9,6,2,3,2,1]
 print(sort_list(li))
+
+
+# sort list without using inbuilt function
+def sort_list(lst):
+    n = list_length(lst)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if lst[i] > lst[j]:
+                lst[i], lst[j] = lst[j], lst[i]
+    return lst
+def list_length(lst):
+    count = 0
+    for _ in lst:
+        count += 1
+    return count
+li=[1,32,45,6,9,6,2,3,2,1]
+print(sort_list(li))
+
  
 
 
@@ -145,7 +195,7 @@ print(common_elements(li1,li2))
 
  
  
- 
+ #rotate_left using inbuilt finction
 def rotate_left(lst, k=3):
     n=len(lst)
     rotated = []
@@ -154,6 +204,24 @@ def rotate_left(lst, k=3):
     for i in range(k):
         rotated.append(lst[i])
     return rotated
+li=[1,32,45,6,9,6,2,3,2,1]
+print(rotate_left(li))
+
+
+ #rotate_leftwithout  using inbuilt finction
+def rotate_left(lst, k=3):
+    n=list_length(lst)
+    rotated = []
+    for i in range(k, n):
+        rotated.append(lst[i])
+    for i in range(k):
+        rotated.append(lst[i])
+    return rotated
+def list_length(lst):
+    count = 0
+    for _ in lst:
+        count += 1
+    return count
 li=[1,32,45,6,9,6,2,3,2,1]
 print(rotate_left(li))
 
@@ -174,7 +242,7 @@ print(split_even_odd(li))
  
  
  
- 
+ # are equal list using inbuilt function
 def are_equal(lst1, lst2):
     if len(lst1) != len(lst2):
         return False
@@ -186,9 +254,25 @@ li1=[2,4,5,6,87,4,23,7,8]
 li2=[2,4,5,6,87,4,23,7,8]
 print(are_equal(li1,li2))
 
- 
- 
-'''
+ # are equal list without using inbuilt function 
+def are_equal(lst1, lst2):
+    if list_length(lst1) != list_length(lst2):
+        return False
+    for i in range(list_length(lst1)):
+        if lst1[i] != lst2[i]:
+            return False
+    return True
+def list_length(lst):
+    count = 0
+    for _ in lst:
+        count += 1
+    return count
+li1=[2,4,5,6,87,4,23,7,8]
+li2=[2,4,5,6,87,4,23,7,8]
+print(are_equal(li1,li2))
+
+
+
 def list_to_string(lst):
     result = ''
     for ch in lst:
@@ -196,8 +280,6 @@ def list_to_string(lst):
     return result
 li=[1,2,3,4,5]
 print(list_to_string(li))
-'''
-
 
 
 
@@ -263,7 +345,7 @@ def alternate_case(s):
 str="programming"
 print(alternate_case(str))
 
- 
+#  reverse each words using inbuilt function
 def reverse_each_word(s):
     result = ''
     word = ''
@@ -276,6 +358,30 @@ def reverse_each_word(s):
             result += ' '
             word = ''
     return result.strip()
+
+
+str="programming"
+print(reverse_each_word(str))
+
+
+#  reverse each words without using inbuilt function
+def reverse_each_word(s):
+    result = ''
+    word = ''
+    for ch in s + ' ':
+        if ch != ' ':
+            word += ch
+        else:
+            for i in range(string_length(word)-1, -1, -1):
+                result += word[i]
+            result += ' '
+            word = ''
+    return result.strip()
+def string_length(s):
+    count = 0
+    for _ in s:
+        count += 1
+    return count
 
 str="programming"
 print(reverse_each_word(str))
