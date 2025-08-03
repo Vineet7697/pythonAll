@@ -167,7 +167,6 @@
 #         ans[i]=ans.get(i)+1
 #     else:
 #         ans[i]=1
-        
 
 # freq=0
 # for i in ans:
@@ -176,3 +175,22 @@
 # for i in ans:
 #     if ans[i]==freq:
 #         print(f"'{i}':{freq}")
+
+
+
+def highest_freq(s):
+    ans={}
+    for i in s:
+        if i in ans:
+            ans[i]=ans.get(i)+1
+        else:
+            ans[i]=1
+    freq=0
+    for i in ans:
+        if ans[i]>freq:
+           freq=ans[i]
+    for i in ans:
+         if ans[i]==freq:
+            print(f"'{i}':{freq}")           
+s="programming"
+highest_freq(s)

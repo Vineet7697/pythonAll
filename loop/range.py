@@ -6,8 +6,8 @@
 # print(list(range(11)))
 # print(list(range(2,21,2)))
 # print(list(range(1,21,2)))
-# print(list(range(1,11,-1)))
-# print(list(range(-1,-11)))
+# print(list(range(1,11,-1))) #empty list
+# print(list(range(-1,-11)))  #empty list
 # print(list(range(-1,-11,-1)))
 # print(list(range(-10,20,2)))
 
@@ -26,8 +26,3 @@ while i<=10:
     i=i+1
     
     
-    
-    
-# Q1=print even number 1to 10
-# Q2=print odd number 1 to 10
-# Q3=print number from 10 to 1

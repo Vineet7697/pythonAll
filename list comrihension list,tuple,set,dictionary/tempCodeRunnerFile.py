@@ -1,2 +1,2 @@
 
-#prime number using list comprehension
+#     print(i,end=" ")
