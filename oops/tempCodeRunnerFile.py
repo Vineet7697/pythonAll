@@ -1,3 +1,2 @@
-
-print(id(Student))
-print(id(obj1.name))
+def bank(self):
+        print("bank from B class")
