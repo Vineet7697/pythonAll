@@ -149,15 +149,17 @@ class B:
     def bank(self):
         print("bank from B class")
 class C(A,B):
-    pass
+    def bank(self):
+        print("bank from C class")
 class D(C):
     def bank(self):
         print("bank from D class")
 class E(C):
     pass
-obj=E()
-obj.home()
-obj.bank()
-
-
+obj1=E()
+obj1.home()
+obj1.bank()
+obj2=D()
+obj2.home()
+obj2.bank()
 # inheritence, type of inheritence, method overriding , Super(), MRO(method resolution order)
